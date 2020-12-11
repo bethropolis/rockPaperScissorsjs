@@ -8,7 +8,7 @@ p {
 }
 
 pre code > *{
-text-shadow: none; 
+text-shadow: 0 0 #000;  
 }
 
 .docs {
