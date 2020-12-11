@@ -136,27 +136,22 @@ you can do a lot more with this just check the examples [here](bethropolis.githu
   ```
    This function determines the winner where the data passed <br>
    required arguments are `user` and `computer` guess or trows eg. `rock` or `paper` or `scissors`<br>
-   but the arguments being passed are rather in numbers to represent the guesses.<br>
-   how to represent:
-   ```js
-         'rock' = 1
-         'paper' = 2
-         'scissors' = 3
-   ```
+ <br>
+ 
    it will to be like
   ```js
-        player.Won(1,3)// user= rock and computer=scissors
-        player.Won(2,2)// user= paper and computer=paper
-        player.Won(3,1)// user=scissors  and computer=rock
+        player.Won('rock','scissors')// user= rock and computer=scissors
+        player.Won('paper','paper')// user= paper and computer=paper
+        player.Won('scissors','rock')// user=scissors  and computer=rock
   ```
 
 Example:
 ```js
      const player = new Play();
 
-        console.log(player.Won(1,2))// user= rock and computer=scissors
-        console.log(player.Won(3,3))// user= scissors and computer=scissors
-        console.log(player.Won(3,1))// user=scissors  and computer=rock
+        console.log(player.Won('rock','scissors'))// user= rock and computer=scissors
+        console.log(player.Won('scissors','scissors'))// user= scissors and computer=scissors
+        console.log(player.Won('scissors','rock'))// user=scissors  and computer=rock 
 ```
 output:
 ```js
@@ -164,7 +159,7 @@ output:
        draw
        false
 ```
-> it must be a number being passed
+> passing numbers is still supported but not required
  
 ## extra
 ---
