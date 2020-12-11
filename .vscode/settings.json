@@ -1,0 +1,12 @@
+{
+    "editor.quickSuggestions": true,
+    "editor.suggest.localityBonus": true,
+    "editor.suggest.shareSuggestSelections": true,
+    "editor.find.autoFindInSelection": "always",
+    "editor.fontSize": 27,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.fontLigatures": null,
+    "terminal.integrated.fontWeight": 500,
+    "terminal.integrated.localEchoStyle": null
+} 

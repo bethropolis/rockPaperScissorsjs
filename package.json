@@ -1,0 +1,25 @@
+{
+  "name": "rockpaperscissorsjs",
+  "version": "1.1.0", 
+  "description": "ready made package to help you with your rock paper scissors project",
+  "main": "rockPaperScissors.JS",
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bethropolis/rockPaperScissorsjs.git"
+  },
+  "keywords": [
+    "rock",
+    "paper",
+    "scissors",
+    "CLI",
+    "game"
+  ],
+  "author": "bethuel kipsang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bethropolis/rockPaperScissorsjs/issues"
+  },
+  "homepage": "https://github.com/bethropolis/rockPaperScissorsjs#readme"
+}
+ 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock paper scissors test</title>
+    <script src="../rockPaperScissors.JS"></script>
+</head>
+<body>
+<div id="app">
+    <label for="won" width="100px">won:</label>
+    <h4 id="won" width="100px"></h4>    
+     <label for="computer" >computer:</label>
+    <h4 id="computer"></h4>  
+      <label for="user">user:</label>
+    <h4 id="user"></h4> 
+    <input type="text"  id="user-choice">
+    <button onclick="playit()">submit</button>
+ </div>
+</body> 
+  <script>
+  let player = new Play();
+  inp = document.querySelector('#user-choice');
+  inp.addEventListener('input',()=>{
+    document.querySelector('#user').textContent = inp.value;  
+  })
+ function playit() {  
+    const result = player.Roll(inp.value);
+    document.querySelector('#computer').textContent = result.computer;
+    document.querySelector('#user').textContent = result.user;
+    document.querySelector('#won').textContent = result.won;
+    console.log(result);  
+ }   
+  
+  </script>
+</html>
