@@ -61,7 +61,7 @@ then crate an object to use
 ```js
     const player = new Play();// you can name it anything other than player
 ````
-> you can find the demos [here](bethropolis.github.io/rockPaperScissorsJS)<br>
+> you can find the demos [here](https://www.bethropolis.ga/rockPaperScissorsjs/)<br>
 
 ### using the functions
 there are three functions; 
@@ -128,7 +128,7 @@ Example 2 output could be:
   ` The computer guess is: rock`
 <br>
 
-you can do a lot more with this just check the examples [here](bethropolis.github.io/rockPaperScissorsJS)<br>
+you can do a lot more with this just check the examples [here](https://www.bethropolis.ga/rockPaperScissorsjs/)<br>
 
 ### won
   ```js    
