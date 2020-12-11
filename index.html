@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rock paper scissors</title>
+    <link rel="stylesheet" href="./lib/font-awesome/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="http://localhost/lib/materialize/css/materialize.min.css"
+    /> 
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="http://localhost/lib/prism/prism.css" />
+    <script src="http://localhost/lib/prism/prism.js"></script>
+    <script src="http://localhost/lib/jquery/jquery.js"></script>
+    <script src="http://localhost/lib/vue/vue.min.js"></script>
+    <script src="./lib/rockPaperScissorsJS/rockPaperScissors.min.js"></script>
+    
+  </head> 
+  <body class="grey darken-4">
+    <nav class="black center">
+      <h5 class="header-text white-text left">RPS<span class="red-text">js</span></h5>
+      <ul class="right">   
+        <li><a href="#docs" class="white-text margin-l">docs</a></li> 
+        <li><a href="#about" class="white-text margin-l">about</a></li> 
+        <li><a href=""><i class="fa fa-github fa-3x" title="fork me on github"></i></a></li>
+      </ul>
+    </nav> 
+ 
+    <div id="intro" class="intro">
+      <div class="center white-text">
+        <h5>introduction to RPSjs</h5>
+
+        <p>
+          RPSjs is a rock paper scissors game library that helps<br />
+          in creating a fun and awsome RPS games.
+        </p>
+        <span class="orange-text">V 1.0.1</span><br/><br/> 
+        <div class="btns inline"> 
+          <a href="lib/rockPaperScissorsJS/rockPaperScissors.min.js" download="rockPaperScissors"><button class="btn margin-l green">download <i class="fa fa-download"></i></button></a>
+          <button class="btn margin-l grey">github <i class="fa fa-github"></i></button>
+        </div>
+      </div>
+      <!-- <div class="right white-text">hello</div> -->
+      <div class="cdn-links center fade-out white-text">
+        <h5>
+          you can use the following <span class="orange-text">cdn</span> links
+        </h5>
+        <ul>
+          <span class="cdn-copy"
+            ><code class="black text-yellow">https://bethropolis.ga/github</code
+            ><i class="fa fa-clipboard fa-2x"></i
+          ></span>
+          
+        </ul>
+
+      <h5>
+          instal via <span class="orange-text">npm</span> 
+        </h5>
+        <ul>
+          <span class="cdn-copy v-npm"
+            >npm i rockPaperScissorsJS
+            <i class="fa fa-clipboard fa-2x margin-l"></i
+          ></span>
+          
+        </ul>        
+      </div>
+    </div> 
+
+   <div class="start white-text"> 
+    <h4 class="center">
+          <span class="play-o orange-text">#</span>getting started
+    </h4>
+    <p class="margin-l"> to get started you will need to bring in rockPaperScissorsJS <span class="red-text">(</span>RPS<sub>js</sub><span class="red-text">)</span> library by adding the script tags onto the head and pointing it to the RPSjs file<br></P>
+    <p class="margin-l"> if you are using a cdn the src should point to that cdn link.</p>
+   <pre class="black"><code class="language-html black white-text">
+   &lthead&gt
+        &ltscript src="path/to/rockPaperScissors.js"&gt &lt/script&gt 
+   &lt/head&gt    
+   </code></pre> 
+   </div>
+     <div class="start white-text">
+     <h4 id="docs" class="center white-text">
+          <span class="play-o orange-text">#</span>docs and examples 
+    </h4> 
+    <p class="margin-l"> each of the examples bellow show how the library can be used and bellow each is a demo and a few words on how it works.<br><br>
+     let's get started.<br></p>
+    </div>
+  <label for="data-t1">example:</label>
+    <div id="app" class="docs">
+      <div class="doc">
+        <div class="r">
+          <pre class="black">
+    <code class="language-html black white-text">
+    data: &ltp id="text"&gt&lt/p&gt 
+
+    &ltscript&gt
+      const player = new Play(e); // where e can be 'rock','paper' or 'scissors' 
+       //this creates a new object player and the action must be passed as an argument
+       //the three actions are users guess which could be `rock`,`paper` or `scissors`
+
+     let data = player.Roll(); 
+     document.getElementById('text').textContent = `computer:${data.computer} user:${data.user} won:${data.won}`
+     //the Roll() function returns an object.
+     // try it bellow
+    &lt/script&gt
+    </code>
+    </pre>
+        </div>
+        <div class="l">
+          <div class="container">
+            <label for="data-t1">data:</label>
+            <p id="data-t1" class="h1-test white-text"></p>
+            <button @click="doRoll('rock','data-t1')" class="btn blue">rock</button>
+            <button @click="doRoll('paper','data-t1')" class="btn orange">paper</button>
+            <button @click="doRoll('scissors','data-t1')" class="btn">scissors</button>
+          </div> 
+        </div>
+      </div>
+
+      <div class="explain white-text">
+        <h4 class="center">
+          <span class="play-o orange-text">#</span>Play Object
+        </h4>
+        <p class="center">
+          the play object takes a parameter which would be the users input
+          <br />
+          allowed parameters should only be
+          <span class="orange-text">`rock`</span>,<span class="orange-text"
+            >`paper`</span
+          >
+          or <span class="orange-text">`scissors`</span>.
+        </p>
+        <br />
+        <p class="margin-l"> <b class="grey-text">note:</b> the parameter passed is what the user placed as input and also notice the <b><span class="orange-text">Roll()</span></b> function cause we will use that a lot</p>
+        <label>example:</label>
+      </div>
+
+      <div class="doc">
+        <div class="r">
+          <pre class="black">
+        <code class="language-html  black white-text">
+    data: &ltp id="text"&gt&lt/p&gt  
+    &ltinput type="text" id="user-input" &gt
+
+  &ltscript&gt
+    let input = document.queryselector('user-input');
+    const player = new Play(input.value)// dynamically changing according to users input 
+
+    let data = player.Roll();// always call the Roll function 
+    document.getElementById('text').textContent = `computer:${data.computer} user:${data.user} won:${data.won}`
+  &lt/script&gt
+
+        </code>
+        </pre>
+        </div>
+        <div class="l">
+          <label for="data-t2">data:</label>
+          <p id="data-t2" class="h1-test orange-text center"></p>
+          <div class="input-field margin-c inp center">
+            <input 
+              class="grey "
+              type="text"
+              id="usert2"
+              v-model="input" 
+              placeholder="input your guess...."
+            />
+            <button class="btn purple" @click="doRoll(input, 'data-t2')" :disabled="input < 2">test</button>
+          </div>
+        </div>
+      </div>
+     <div class="explain white-text">
+        <h4 id="roll" class="center roll">
+          <span class=" orange-text">#</span>Roll function
+        </h4> 
+        <p class="">
+          the Roll function takes users input and generates computers guess then compares and returns output. <br> <br>     
+          it is not necessary to pass the users guess as a parameter when creating a new Object, you can instead pass it on the Roll function and it perform exactly the same.<br>
+          this is <b>highly recommended.</b>
+          <br />
+          allowed parameters should also be
+          <span class="orange-text">`rock`</span>,<span class="orange-text"
+            >`paper`</span
+          >
+          or <span class="orange-text">`scissors`</span>.
+        </p>
+        <br />
+        <label>example:</label>
+      </div> 
+
+      <div class="doc">
+        <div class="r">
+          <pre class="black">
+  <code class="language-html  black white-text">
+data: &ltp id="text"&gt&lt/p&gt  
+
+ltselect id="user-input" &gt
+ &ltoption&gtrock&lt/option&gt  
+ &ltoption&gtpaper&lt/option&gt  
+ &ltoption&gtscissors&lt/option&gt  
+&lt/select&gt
+
+&ltscript&gt
+  let input = document.queryselector('user-input');
+  const player = new Play()
+
+    let data = player.Roll(input.value);// still works the same but this is recommended
+    document.getElementById('text').textContent = `computer:${data.computer} user:${data.user} won:${data.won}`
+&lt/script&gt
+        </code>
+        </pre>
+        </div>
+        <div class="l">
+        <label for="data-t3">data:</label>
+          <p id="data-t3" class="h1-test green-text center"></p>
+          <div class="input-field margin-c center">
+             <select @change="selected" name="select" class="white " id="selectInput" value="rock" style="margin: 0 auto;width: 80%;display: block;">
+               <option value="rock">rock</option>
+               <option value="paper">paper</option> 
+               <option value="scissors">scissors</option>
+             </select>  
+            <button class="btn amber margin-t" @click="selected">test</button>
+          </div>
+        </div>
+
+      </div>
+  <div class="white-text">
+        <h4 class="center">
+          <span class="last-2 orange-text">#</span>last two functions           
+        </h4>
+      <p class="margin-l">there are two functions left</p>
+        <ul>
+         <li class="margin-l"><a href="#compute-function">compute function</a></li>
+         <li class="margin-l"><a href="#won-function">won function</a></li>    
+        </ul>
+      
+      <p class="margin-l">this two functions are not necessarily important but maybe you may need it for the following reasons:<br><br>
+      </p>
+      <li>you only need to generate the computers guess randomly.</li>
+      <li>you already got the computer and users results and need to determine who the winner is.</li>
+      <br>
+      <p class="margin-l">the <a href="#roll">Roll</a> function does this under the hood for you.</p><br>
+
+      <div class="white-text">
+        <h4 class="center" id="compute-function">
+          <span class="last-2 orange-text">#</span>compute function           
+        </h4>
+        <p>The compute function is the easiest cause it takes no parameters and returns at random either <span class="orange-text">`rock`</span>,<span class="orange-text">`paper`</span> or <span class="orange-text">`scissors`</span>.</p> 
+        </div>
+    </div>  
+<div class="doc">
+  <div class="r">
+  <label>first function:</label>
+    <pre class="black"><code class="language-html black white-text">
+&ltp id="text"&gt&lt/p&gt
+ &ltscript&gt 
+  const player = new Play();
+  // the compute function will always be random
+  document.querySelector('#text').textContent = player.compute();
+ &lt/script&gt 
+   </code></pre>  
+  </div>
+  <div class="l">
+   <label for="data-t4">data:</label>
+          <h5 id="data-t4" class="h1-test center amber-text"></h5>
+          <div class="input-field margin-c center">
+             <button @click="compute('data-t4')" class="margin-t btn cyan">compute</button> 
+          </div>
+  </div>
+</div>
+
+
+<div class="white-text">
+        <h4 class="center" id="won-function">
+          <span class="last-2 orange-text">#</span>won function           
+        </h4>
+        <p>the won funtion takes two parameters one is for the user and the other is for the computers result respectively and using it determines the champion.</p><br/> 
+          
+        </div>
+    
+<div class="doc">
+  <div class="r">
+  <label>first function:</label>
+    <pre class="black"><code class="language-html black white-text">
+ data: &ltp id="text"&gt&lt/p&gt
+ &ltscript&gt 
+  const player = new Play();
+  // find who won
+    document.querySelector('#text').textContent = player.won('rock','paper');// (user, computer) renders false
+    // here are more
+    player.won('rock','scissors') // returns true
+    player.won('paper','paper') // returns draw
+    player.won('paper','scissors') // returns false
+    player.won('scissors','rock') // returns false
+    // you get the idea 
+ &lt/script&gt 
+   </code></pre>  
+  </div>
+  <div class="l">
+   <label for="data-t5">data:</label>
+          <h5 id="data-t5" class="h1-test center" :class="[state == false ? 'red-text':state == true ? 'green-text':'orange-text']"></h5>
+          <div class="input-field margin-c center inp">
+          <input  type="text" id="userG"  class="left white-text grey  darken-3" placeholder="enter for user...">
+          <input type="text" id="compG" class="right white-text grey darken-3" placeholder="enter for computer...">
+          <button  id="woon" class="btn yellow darken-3" @click="Checkit">test</button> 
+          </div>
+  </div> 
+ </div>
+</div>
+<h4 class="center white-text ">and that's all :)</h4>
+<div class="center">
+  <a href="lib/rockPaperScissorsJS/rockPaperScissors.JS" download="rockPaperScissors"><button class="btn  margin-l green">download <i class="fa fa-download"></i></button></a>
+ <a href=""><button class="btn  margin-l grey">github <i class="fa fa-github"></i></button></a>
+</div>
+<div id="about" class="summary white-text ">
+<h4 class="about-h center"><span class=" orange-text">a</span>bou<span class="last-2 orange-text">t</span></h4>
+<p> The library is at it's first stage of testing especially the package installed from npm is still in <sup>beta</sup>. <br>
+improvements are being added to the library as it <b>grows<b></p>
+
+<p>any issues should be reported <a href="">here</a></p>
+
+</div>
+
+<blockquote class="white-text ">
+        if you would like to support the project please consider starring it on <a href="">github</a>, it means a lot to me.
+</blockquote>
+<div class="me card grey darken-1 hoverable">
+<h4 class="about-h center">about <span class="last-2 orange-text">me</span></h4>
+<p>hello I am bethuel, a 16y web developer or aspiring to be and i am the one maintaining this project.
+feel free to reach me on:</p>
+<ul>
+    <a href="https://twitter.com/bethropolis"><i class="fa fa-twitter blue-text margin-l fa-2x" id="twitter"></i></a>
+    <a href="mailto:bethropolis@gmail.com" class="grey-text darken-4"><i class="fa fa-envelope fa-2x"></i></a>
+</ul>
+</div>
+
+    <footer>      
+     <ul>
+       <a href="" class="margin-l">github</a>
+       <a href="">contact</a> 
+     </ul>
+     <a href="#intro" class="up"><i title="go to top" class="right fa fa-chevron-circle-up fa-3x"></i></a>
+    </footer>
+  </body>
+  <script src="./js/index.js"></script> 
+</html>
