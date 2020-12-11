@@ -10,6 +10,13 @@ p {
 pre code > *{
 text-shadow: 0 0 #000;  
 }
+.token.function {
+    color: #86D3FF;
+}
+
+.token.boolean, .token.constant, .token.deleted, .token.number, .token.property, .token.symbol, .token.tag {
+    color: #FF7878;
+}
 
 .docs {
     width: 100%;
