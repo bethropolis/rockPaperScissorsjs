@@ -49,7 +49,7 @@ getting started you will first require the library which can be done by using th
 ```
 or if you are using a CDN then you can use the following
 ```html
-   <script src="https://bethropolis.github.io/rockPaperScissorsJS/rockPaperScissors.JS"></script> 
+   <script src="https://cdn.jsdelivr.net/npm/rpsjs@1.0.0/rockPaperScissors.min.js"></script>  
 
 ```
 > the import is still not fully functional <br>
