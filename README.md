@@ -1,5 +1,6 @@
 # RockPaperScissorsJS
 ---
+
 ## Table of content
 * [intro](#intro)
 * [getting started](#getting-started)
@@ -13,16 +14,17 @@
 
 ## intro
 ---
-<p>RockPaperScissorsJS is a javascript library that simplifies the making of the great rock paper scissors game and easy to use</p><br>
-<p> the package is made in a Javascript class format where your <b>play</b> will be considered an object</p>
+RockPaperScissorsJS is a javascript library that simplifies the making of the great rock paper scissors game and easy to use. 
+<p> the package is madein a Javascript class format where your <b>play</b> will be considered an object</p>
 Here is an example:
 
 ```js 
-  const player = new Play('paper'); 
+  const player = new Play(); 
   //this creates a new object player and the action must be passed as an argument
-  //the three actions are users guess which could be `rock`,`paper` or `scissors`
 
- console.log(player.Roll()); 
+
+ console.log(player.Roll('paper'));  
+ //the three actions are users guess which could be `rock`,`paper` or `scissors`
  //the Roll() function assigned is where everything is done mostly.
  ```
 
@@ -45,47 +47,64 @@ the response or display on the console:
 getting started you will first require the library which can be done by using the script tags
 
 ```html
-   <script src="./rockPaperScissors.JS"> </script>// get the library from the path where it's located
+   <script src="./path/to/rockPaperScissors.JS"> </script> // get the library from the path where it's located
 ```
 or if you are using a CDN then you can use the following
 ```html
-   <script src="https://cdn.jsdelivr.net/npm/rpsjs@1.0.0/rockPaperScissors.min.js"></script>  
+   <script src="https://cdn.jsdelivr.net/npm/rockpaperscissorsjs@1.1.0/rockPaperScissors.min.js"></script> 
 
 ```
-> the import is still not fully functional <br>
+> You can use import in node.js and other runtimes.
+
+```js
+const Play = require('rpsjs');
+
+// create a new Play object and set rounds to play to 10.
+const game = new Play(10);
+
+// use the game object to play Rock, Paper, Scissors
+const result = game.Roll("rock");
+console.log(result);
+```
 
 > place the CDN link onto the header 
-<br>
+<br> 
 
-then crate an object to use
+then create an object to use
 ```js
-    const player = new Play();// you can name it anything other than player
+    const player = new Play(...rounds=10, ...user=" ");// you can name it anything other than player
+
 ````
-> you can find the demos [here](https://www.bethropolis.ga/rockPaperScissorsjs/)<br>
+> you can find the demos [here](https://bethropolis.github.io/rockPaperScissorsJS)<br>
 
 ### using the functions
 there are three functions; 
 ```js
-       Roll(user)//argument are not required 
+       Roll(user)
        Compute()
-       Won(user, computer)// required!
+       Won(user, computer)
+       Multiplayer(user,computer)
+       Scores() // get users scores
+       Clear() // clear scores and plays
 ```
 
-> Note that the functions beggin with a capital letter.
+> Note that the functions begin with a capital letter.
+
 ### Roll
+
 from the above example you can see that the `Roll()` function did everything for us without us doing anything.
 the `Roll()` function requires no parameters if you stated it when making the Object.<br>
 Example 1:
 ```js
-  const player = new Play('rock');// user guess in this case is rock
-  console.log(player.Roll());// since user guess was passed on the object there is no need to redo that again
+  const player = new Play(10);
+  console.log(player.Roll('paper'));// passing user guess to roll function (recommended)
 
 ```
 Example 2:
 ```js
-   const player = new Play();// user guess not passed
-  console.log(player.Roll('paper'));
 
+ const player = new Play(10,'rock');// user guess in this case is rock
+  console.log(player.Roll());// since user guess was passed on the object there is no need to redo that again
 ``` 
 <br>
 Example 1 output could be:
@@ -94,7 +113,9 @@ Example 1 output could be:
     [
        user: rock,
        computer: scissors,
-       won: true
+       won: true,
+       uscore: 1,
+       cscore: 0
     ]
 ```
 
@@ -104,16 +125,18 @@ Example 2 output could be:
     [
        user: paper,
        computer: paper,
-       won: draw
+       won: draw,
+       uscore: 0,
+       cscore: 0
     ]
 ```
-> the computer guess is randomly made
+> the computer guess is randomly made.
 
 
 
 ### Compute
 ---
-  the `compute()` function will help you if you would like to get a random guess for the computer;<br>
+  the `compute()` function will help you if you would like to get a random guess for the computer.<br>
   Example:
   ```js
   const player = new Play();
@@ -128,7 +151,7 @@ Example 2 output could be:
   ` The computer guess is: rock`
 <br>
 
-you can do a lot more with this just check the examples [here](https://www.bethropolis.ga/rockPaperScissorsjs/)<br>
+you can do a lot more with this just check the examples [here](https://bethropolis.github.io/rockPaperScissorsJS)<br>
 
 ### won
   ```js    
@@ -159,13 +182,14 @@ output:
        draw
        false
 ```
-> passing numbers is still supported but not required
+
+
  
 ## extra
 ---
 this are just some extras 
 * you can clone this on [github](https://github.com/bethropolis/rockPaperScissorsJS) and if you would like to Contribute you can send  a pull request and I will check it out and see if I can marge it. 
-* creator [bethropolis](https://twitter.com/bethropolis);
+* creator [bethropolis](https://github.com/bethropolis);
 
 ## License 
 ---
