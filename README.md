@@ -51,7 +51,7 @@ getting started you will first require the library which can be done by using th
 ```
 or if you are using a CDN then you can use the following
 ```html
-   <script src="https://cdn.jsdelivr.net/npm/rockpaperscissorsjs@1.1.0/rockPaperScissors.min.js"></script> 
+   <script src="https://cdn.jsdelivr.net/npm/rockpaperscissorsjs@1.5.0/rockPaperScissors.min.js"></script> 
 
 ```
 > You can use import in node.js and other runtimes.
