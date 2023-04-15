@@ -49,11 +49,18 @@ getting started you will first require the library which can be done by using th
 ```html
    <script src="./path/to/rockPaperScissors.JS"> </script> // get the library from the path where it's located
 ```
-or if you are using a CDN then you can use the following
+if you are using a CDN then you can use the following
 ```html
    <script src="https://cdn.jsdelivr.net/npm/rockpaperscissorsjs@1.5.0/rockPaperScissors.min.js"></script> 
 
 ```
+
+you can also install using nodejs by running.
+
+```bash
+npm install rpsjs
+```
+
 > You can use import in node.js and other runtimes.
 
 ```js
