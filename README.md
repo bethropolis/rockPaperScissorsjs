@@ -200,5 +200,5 @@ this are just some extras
 
 ## License 
 ---
-Licensed under my favourate License, MIT License.
+Licensed under my favourate License, [MIT License](LICENCE).
 
